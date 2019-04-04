@@ -40,7 +40,7 @@ public class SignUp extends AppCompatActivity {
                 s4=e4.getText().toString();
                 s5=e5.getText().toString();
                 SQLiteDatabase data=openOrCreateDatabase("d",MODE_PRIVATE,null);
-                data.execSQL("create table if not exists camp(name varchar, password varchar, email varchar");
+                data.execSQL("create table if not exists camp(name varchar, password varchar, email varchar)");
                 String s="select * from camp where name='"+s3+"' and password='"+s4+"'";
                 Cursor c=data.rawQuery(s,null);
                 if(c.getCount()>0)
